@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { UiModule } from '@bluebits/ui';
+// import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 
 const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -16,7 +19,9 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [AppComponent, HomePageComponent, ProductListComponent, HeaderComponent, FooterComponent],
-    imports: [BrowserModule, RouterModule.forRoot(routes), UiModule],
+    imports: [BrowserModule, RouterModule.forRoot(routes), UiModule,
+    //  AccordionModule, BrowserAnimationsModule
+    ],
     providers: [],
     bootstrap: [AppComponent]
 })
